@@ -1,1 +1,40 @@
+#!ipxe
 
+# OpenBSD Operating System
+# http://netbsd.org
+
+:netbsd_menu
+set os {{ releases.netbsd.name }}
+set os_arch ${arch}
+iseq ${os_arch} x86_64 && set os_arch amd64 ||
+iseq ${os_arch} i386 && set os_arch i386 ||
+menu ${os}
+{% for item in releases.netbsd.versions %}
+item {{ item.code_name }} ${space} ${os} {{ item.name }}
+{% endfor %}
+choose ver || goto netbsd_exit
+{% for item in releases.netbsd.versions %}
+iseq ${ver} {{ item.code_name }} && set image_ver {{ item.image_ver }} ||
+{% endfor %}
+goto boot_netbsd
+
+:boot_netbsd
+iseq ${platform} pcbios && goto pcbios_boot ||
+iseq ${platform} efi && goto efi_boot ||
+
+:pcbios_boot
+set src ${netbsd_mirror}/${netbsd_base_dir}/${ver}/${os_arch}/NetBSD-${image_ver}-{platform}.iso
+imgfree
+initrd ${src}
+chain ${memdisk} iso raw
+goto openbsd_menu
+
+:efi_boot
+set src ${netbsd_mirror}/${netbsd_base_dir}/${ver}/${os_arch}/install${image_ver}.img
+imgfree
+sanboot ${src}
+goto openbsd_menu
+
+:openbsd_exit
+clear menu
+exit 0
