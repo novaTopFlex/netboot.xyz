@@ -38,7 +38,7 @@ endpoints:
     flavor: xfce
     kernel: ubuntu-18.04-live-kernel
   ubuntu-18.04-KDE-squash:
-    path: /ubuntu-squash/releases/download/18.04.5-6a909f1e/
+    path: /ubuntu-squash/releases/download/18.04.5-e437f9b4/
     files:
     - filesystem.squashfs
     os: ubuntu
@@ -46,7 +46,7 @@ endpoints:
     flavor: KDE
     kernel: ubuntu-18.04-live-kernel
   ubuntu-18.04-Budgie-squash:
-    path: /ubuntu-squash/releases/download/18.04.5-be9dd330/
+    path: /ubuntu-squash/releases/download/18.04.5-b71b6d21/
     files:
     - filesystem.squashfs
     os: ubuntu
@@ -136,13 +136,13 @@ endpoints:
     flavor: xfce
     kernel: kali-xfce-squash
   kde-neon-user:
-    path: /ubuntu-squash/releases/download/20240320-1805-9b372e2a/
+    path: /ubuntu-squash/releases/download/20240321-0715-9b372e2a/
     files:
     - vmlinuz
     - filesystem.squashfs
     - initrd.lz
     os: neon
-    version: 20240320-1805
+    version: 20240321-0715
     flavor: user
     kernel: kde-neon-user
   regolith-current:
@@ -174,7 +174,7 @@ endpoints:
     version: '15'
     kernel: deepin-15-squash
   feren-squash:
-    path: /ubuntu-squash/releases/download/2023.01-1d46b944/
+    path: /ubuntu-squash/releases/download/2023.01-2aadd48c/
     files:
     - filesystem.squashfs
     - initrd
@@ -326,7 +326,7 @@ endpoints:
     os: gparted
     version: stable
   rescatux:
-    path: /debian-squash/releases/download/0.72-beta8-2db92971/
+    path: /debian-squash/releases/download/0.72-beta8-55ca0efd/
     files:
     - filesystem.squashfs
     - initrd
@@ -398,7 +398,7 @@ endpoints:
     os: kaspersky
     version: '18'
   septor:
-    path: /debian-squash/releases/download/2022-12265673/
+    path: /debian-squash/releases/download/2022-4bfba007/
     files:
     - filesystem.squashfs
     - initrd
@@ -445,7 +445,7 @@ endpoints:
     flavor: kde
     kernel: manjaro-kde-current
   fatdog:
-    path: /asset-mirror/releases/download/901-28d54d00/
+    path: /asset-mirror/releases/download/901-ddcb82ff/
     files:
     - vmlinuz
     - initrd
@@ -607,7 +607,7 @@ endpoints:
     version: 5.8
     kernel: linux-lite-5-squash
   vyos-rolling:
-    path: /debian-squash/releases/download/1.5-rolling-202403220018-0956eeaa/
+    path: /debian-squash/releases/download/1.5-rolling-202403250019-0956eeaa/
     files:
     - filesystem.squashfs
     - initrd
@@ -812,22 +812,22 @@ endpoints:
     os: memtest86-free
     version: '10.7'
   gentoo-x86:
-    path: /asset-mirror/releases/download/20231106T160201Z-5b773f72/
+    path: /asset-mirror/releases/download/20240129T170346Z-5b773f72/
     files:
     - image.squashfs
     - initrd
     - vmlinuz
     os: gentoo
-    version: 20231106T160201Z
+    version: 20240129T170346Z
     arch: x86
   gentoo-arm64:
-    path: /asset-mirror/releases/download/20231105T230202Z-d5972d15/
+    path: /asset-mirror/releases/download/20240310T233344Z-d5972d15/
     files:
     - image.squashfs
     - initrd
     - vmlinuz
     os: gentoo
-    version: 20231105T230202Z
+    version: 20240310T233344Z
     arch: arm64
   gentoo-amd64:
     path: /asset-mirror/releases/download/20231126T163200Z-63d6ec39/
@@ -839,14 +839,15 @@ endpoints:
     version: 20231126T163200Z
     arch: amd64
   tails:
-    path: /asset-mirror/releases/download/6.0-cfd50f75/
+    path: /asset-mirror/releases/download/6.1-cfd50f75/
     files:
     - vmlinuz
     - initrd.img
     - 9990-misc-helpers.sh
     - tails-amd64-6.0.iso
+    - tails-amd64-6.1.iso
     os: tails
-    version: '6.0'
+    version: '6.1'
     arch: amd64
   hrmpf:
     path: /asset-mirror/releases/download/20231124-1008bb6d/
@@ -977,13 +978,13 @@ endpoints:
     kernel: clonezilla-debian-testing-i686
     arch: i686
   clonezilla-ubuntu-testing-amd64:
-    path: /ubuntu-squash/releases/download/20240319-noble-c67d897c/
+    path: /ubuntu-squash/releases/download/20240327-noble-c67d897c/
     files:
     - filesystem.squashfs
     - initrd
     - vmlinuz
     os: clonezilla
-    version: 20240319-noble
+    version: 20240327-noble
     flavor: testing
     kernel: clonezilla-ubuntu-testing-amd64
     arch: amd64
@@ -1142,7 +1143,7 @@ endpoints:
     flavor: kde-barebones
     version: 220329
   proxmox-backup-server:
-    path: /asset-mirror/releases/download/3.1-1-e7504e47/
+    path: /asset-mirror/releases/download/3.1-1-01e6c736/
     files:
     - initrd
     - proxmox-backup-server.iso
@@ -1388,7 +1389,7 @@ endpoints:
     os: xcp-ng
     version: '8.2'
   garuda-cinnamon:
-    path: /asset-mirror/releases/download/231029-7f0fd76e/
+    path: /asset-mirror/releases/download/231029-0b360492/
     files:
     - amd_ucode.img
     - desktopfs.sfs
@@ -1541,7 +1542,7 @@ endpoints:
     flavor: cinnamon
     kernel: debian-12-live-kernel
   debian-12-lxqt-squash:
-    path: /debian-squash/releases/download/12.5.0-c387dd82/
+    path: /debian-squash/releases/download/12.5.0-43f2cd09/
     files:
     - filesystem.squashfs
     os: debian
